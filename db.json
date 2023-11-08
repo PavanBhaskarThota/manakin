@@ -1,0 +1,13 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "json-server",
+      "lastName": "typicode",
+      "email": "json-server",
+      "password": "json-server",
+      "organization": "typicode",
+      "role": "typicode"
+    }
+  ]
+}
