@@ -1,8 +1,10 @@
-import { TextField } from "@mui/material";
+import { InputAdornment, TextField } from "@mui/material";
 import React from "react";
 import styled from "styled-components";
 import image from "../images/manakin_logo_blue.png";
 import { Link } from "react-router-dom";
+import path from "../images/Path.svg";
+import fill from "../images/Fill 1.svg";
 
 export const Login = () => {
   return (
@@ -17,30 +19,56 @@ export const Login = () => {
           <form>
             <TextField
               variant="standard"
-              label="Email"
               type="email"
+              placeholder="Email"
               InputLabelProps={{
                 style: { color: "#a0a0a0", fontSize: "18px" },
               }}
+              sx={{ borderColor: "white" }}
               InputProps={{
                 style: {
-                  color: "white",
-                  paddingTop: "10px",
-                  fontSize: "20px",
+                  color: "#D8D8D8",
+
+                  fontSize: "16px",
+                  fontStyle: "normal",
+                  fontHeight: "300",
+                  lineHeight: "normal",
+                  fontWeight: "100",
+                  letterSpacing: "1.5px",
+                  paddingBottom: "10px",
                 },
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <img src={path} alt="" />
+                  </InputAdornment>
+                ),
               }}
               style={{ marginBottom: "20px" }}
             />
 
             <TextField
               variant="standard"
-              label="Password"
               type="password"
+              placeholder=" Password"
               InputLabelProps={{
                 style: { color: "#a0a0a0", fontSize: "18px" },
               }}
               InputProps={{
-                style: { color: "white", paddingTop: "10px", fontSize: "20px" },
+                style: {
+                  color: "#D8D8D8",
+                  fontSize: "16px",
+                  fontStyle: "normal",
+                  fontHeight: "300",
+                  lineHeight: "normal",
+                  fontWeight: "100",
+                  letterSpacing: "1.5px",
+                  paddingBottom: "10px",
+                },
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <img src={fill} alt="" />
+                  </InputAdornment>
+                ),
               }}
               style={{ marginBottom: "20px" }}
             />
@@ -48,18 +76,19 @@ export const Login = () => {
             <p>
               <Link to={"/forgotpassword"}>Forgot password?</Link>
             </p>
-
-            <button>Log in</button>
-
-            <p style={{ textAlign: "center" }}>
-              Don't have an account?{" "}
-              <Link to={"/register"}>
-                <span style={{ fontWeight: "bold", color: "white" }}>
-                  Register!
-                </span>
-              </Link>
-            </p>
+            <Link to={"/pintab"}>
+              <button>Log in</button>
+            </Link>
           </form>
+
+          <p style={{ textAlign: "center" }}>
+            Don't have an account?{" "}
+            <Link to={"/register"}>
+              <span style={{ fontWeight: "bold", color: "white" }}>
+                Register!
+              </span>
+            </Link>
+          </p>
         </div>
       </div>
     </DIV>
@@ -69,6 +98,7 @@ export const Login = () => {
 const DIV = styled.div`
   background-color: #081a51;
   height: 100vh;
+  max-height: 100%;
 
   .loginForm {
     width: 40%;
@@ -117,7 +147,7 @@ const DIV = styled.div`
   }
 
   a:hover {
-    text-decoration: underline;
+    text-decoration: solid;
   }
 
   button {
@@ -131,11 +161,6 @@ const DIV = styled.div`
     border-radius: 25px;
     cursor: pointer;
     border: none;
-  }
-
-  button:hover {
-    box-shadow: rgba(166, 166, 166, 0.12) 0px 1px 3px,
-      rgba(0, 0, 0, 0.24) 0px 1px 2px;
   }
 
   /* Media Queries for Mobile */
