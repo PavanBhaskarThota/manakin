@@ -134,6 +134,18 @@ const DIV = styled.div`
     row-gap: 5%;
   }
 
+  .MuiInputBase-root::before {
+    border-bottom-color: white;
+  }
+  .MuiInputBase-root::after {
+    border-bottom-color: white;
+  }
+
+
+  .MuiTextField-root .MuiInputBase-root:hover:before {
+    border-bottom: 2px solid teal;
+  }
+
   p {
     text-align: right;
     margin-bottom: 20px;
