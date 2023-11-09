@@ -93,7 +93,7 @@ export const PinTab = () => {
         </HStack>
         <p>
           <button
-            style={{ color: "#3686F0" }}
+            style={{ color: timer != 0 ?"black":"#3686F0", opacity:0.8}}
             disabled={timer != 0 ? true : false}
             onClick={startTimer}
           >

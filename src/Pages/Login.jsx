@@ -138,7 +138,7 @@ const DIV = styled.div`
     text-align: right;
     margin-bottom: 20px;
     color: #a0a0a0;
-    font-size: 18px;
+    font-size: 17px;
   }
 
   a {

@@ -5,6 +5,12 @@ import styled from "styled-components";
 
 export const Sensors = () => {
   const [open, setOpen] = useState(false);
+
+  const [sensor, setSensor] = useState(null);
+
+  const handleSensor = (index) => {
+    setSensor(index === sensor ? null : index);
+  };
   const handleTrigger = () => {
     setOpen(!open);
   };
@@ -43,9 +49,10 @@ export const Sensors = () => {
               borderRadius: "12px",
               border: "1px solid rgba(0, 0, 0, 0.03)",
               background: "#E3E5F3",
-              height: "55px",
+              height: "65px",
               display: "flex",
               alignItems: "center",
+
               paddingLeft: "18px",
               justifyContent: "space-between",
               marginBottom: "10px",
@@ -54,115 +61,36 @@ export const Sensors = () => {
             Sensors{" "}
             <p style={{ marginRight: "20px", fontSize: "20px" }}>lable</p>
           </Box>
-
-          <Box
-            sx={{
-              width: "95%",
-              margin: "auto",
-              borderRadius: "12px",
-              border: "1px solid rgba(0, 0, 0, 0.03)",
-              background: "#FAFAFA",
-              height: "55px",
-              display: "flex",
-              alignItems: "center",
-              paddingLeft: "18px",
-              justifyContent: "space-between",
-              marginBottom: "10px",
-            }}
-          >
-            Sensor 1
-            <p style={{ marginRight: "20px", fontSize: "14px" }}>Room 401</p>
-          </Box>
-          <Box
-            sx={{
-              width: "95%",
-              margin: "auto",
-              borderRadius: "12px",
-              border: "1px solid rgba(0, 0, 0, 0.03)",
-              background: "#FAFAFA",
-              height: "55px",
-              display: "flex",
-              alignItems: "center",
-              paddingLeft: "18px",
-              justifyContent: "space-between",
-              marginBottom: "10px",
-            }}
-          >
-            Sensor 2
-            <p style={{ marginRight: "20px", fontSize: "14px" }}>Room 403</p>
-          </Box>
-          <Box
-            sx={{
-              width: "95%",
-              margin: "auto",
-              borderRadius: "12px",
-              border: "1px solid rgba(0, 0, 0, 0.03)",
-              background: "#FAFAFA",
-              height: "55px",
-              display: "flex",
-              alignItems: "center",
-              paddingLeft: "18px",
-              justifyContent: "space-between",
-              marginBottom: "10px",
-            }}
-          >
-            Sensor 3
-            <p style={{ marginRight: "20px", fontSize: "14px" }}>Room 404</p>
-          </Box>
-          <Box
-            sx={{
-              width: "95%",
-              margin: "auto",
-              borderRadius: "12px",
-              border: "1px solid rgba(0, 0, 0, 0.03)",
-              background: "#FAFAFA",
-              height: "55px",
-              display: "flex",
-              alignItems: "center",
-              paddingLeft: "18px",
-              justifyContent: "space-between",
-              marginBottom: "10px",
-            }}
-          >
-            Sensor 4
-            <p style={{ marginRight: "20px", fontSize: "14px" }}>Room 405</p>
-          </Box>
-          <Box
-            sx={{
-              width: "95%",
-              margin: "auto",
-              borderRadius: "12px",
-              border: "1px solid rgba(0, 0, 0, 0.03)",
-              background: "#FAFAFA",
-              height: "55px",
-              display: "flex",
-              alignItems: "center",
-              paddingLeft: "18px",
-              justifyContent: "space-between",
-              marginBottom: "10px",
-            }}
-          >
-            Sensor 5
-            <p style={{ marginRight: "20px", fontSize: "14px" }}>Room 406</p>
-          </Box>
-          <Box
-            sx={{
-              width: "95%",
-              margin: "auto",
-              borderRadius: "12px",
-              border: "1px solid rgba(0, 0, 0, 0.03)",
-              background: "#FAFAFA",
-              height: "55px",
-              display: "flex",
-              alignItems: "center",
-              paddingLeft: "18px",
-              justifyContent: "space-between",
-              marginBottom: "10px",
-            }}
-          >
-            Sensor 6
-            <p style={{ marginRight: "20px", fontSize: "14px" }}>Room 407</p>
-          </Box>
+          {[
+            ["sensor 1", "Room 401"],
+            ["sensor 2", "Room 402"],
+            ["sensor 3", "Room 403"],
+            ["sensor 4", "Room 405"],
+            ["sensor 5", "Room 406"],
+            ["sensor 6", "Room 407"],
+            ["sensor 7", "Room 408"],
+          ].map((item, index) => (
+            <Box
+              onClick={() => handleSensor(index)}
+              sx={{
+                width: "95%",
+                margin: "auto",
+                borderRadius: "12px",
+                border: "1px solid rgba(0, 0, 0, 0.03)",
+                background: sensor === index ? "#072f78" : "#FAFAFA",
+                height: "55px",
+                display: "flex",
+                alignItems: "center",
+                paddingLeft: "18px",
+                justifyContent: "space-between",
+                marginBottom: "10px",
+                color: sensor === index ? "#FAFAFA" : "black",
+              }}
+            >
+              {item[0]}
+              <p style={{ marginRight: "20px", fontSize: "14px" }}>{item[1]}</p>
+            </Box>
+          ))}
         </Box>
         <Box
           sx={{
