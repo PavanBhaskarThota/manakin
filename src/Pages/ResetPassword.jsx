@@ -1,7 +1,7 @@
 import { TextField } from "@mui/material";
 import React, { useState } from "react";
 import styled from "styled-components";
-import image from "../images/manakin_logo_white.png";
+import image from "../images/Manakin Logo White.svg";
 import { Link } from "react-router-dom";
 import arrow from "../images/Arrow.svg";
 
@@ -155,7 +155,7 @@ const DIV = styled.div`
     border-radius: 29.5px;
     background: #072f78;
     color: #fff;
-    font-family: Roboto;
+    /* font-family: Roboto; */
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
@@ -216,9 +216,23 @@ const DIV = styled.div`
       margin-top: 5%;
     }
 
-    .resetForm h2{
+    .resetForm h2 {
       margin-bottom: 15%;
+    }
 
+    button {
+      height: 50px;
+      display: block;
+      margin: auto;
+      width: 80%;
+      font-size: 20px;
+      background-color: #081a51;
+      color: white;
+      border-radius: 25px;
+      cursor: pointer;
+      border: none;
+      margin-top: 5%;
+      margin-bottom: 5%;
     }
   }
 

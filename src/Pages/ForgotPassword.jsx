@@ -1,7 +1,7 @@
 import { InputAdornment, TextField } from "@mui/material";
 import React from "react";
 import styled from "styled-components";
-import image from "../images/manakin_logo_white.png";
+import image from "../images/Manakin Logo White.svg";
 import { Link } from "react-router-dom";
 import arrow from "../images/Arrow.svg";
 import email from "../images/Email logo.svg";
@@ -199,6 +199,21 @@ const DIV = styled.div`
       width: 70%;
       margin: auto;
       padding: 50px;
+    }
+
+    button {
+      height: 50px;
+      display: block;
+      margin: auto;
+      width: 80%;
+      font-size: 20px;
+      background-color: #081a51;
+      color: white;
+      border-radius: 25px;
+      cursor: pointer;
+      border: none;
+      margin-top: 5%;
+      margin-bottom: 5%;
     }
   }
 

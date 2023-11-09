@@ -2,6 +2,7 @@ import { HStack, PinInput, PinInputField } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import image from "../images/manakin_logo_white.png";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const PinTab = () => {
   const [timer, setTimer] = useState(30);
@@ -101,9 +102,11 @@ export const PinTab = () => {
           if you didn't receive code in{" "}
           <span style={{ color: "#3686F0" }}>{timer}</span> seconds
         </p>
-        <button type="submit" className="confirmPin">
-          Confirm
-        </button>
+        <Link to={`/sidemenu`}>
+          <button type="submit" className="confirmPin">
+            Confirm
+          </button>
+        </Link>
       </div>
     </DIV>
   );
@@ -193,5 +196,88 @@ const DIV = styled.div`
     background: #072f78;
     width: 205.086px;
     height: 52.491px;
+  }
+
+  /* Media Queries for Mobile */
+  @media (max-width: 450px) {
+    .verifyPin {
+      width: 95%;
+      margin: auto;
+      padding: 0;
+    }
+    .manakinLogo {
+      width: 70%;
+      flex-direction: column;
+      margin: auto;
+      margin-bottom: 10%;
+    }
+
+    .manakinLogo h1 {
+      font-size: 24px;
+    }
+
+    h2 {
+      font-size: 20px;
+      margin-bottom: 10%;
+    }
+
+    .verifyPin p {
+      margin-bottom: 7%;
+      margin-top: 7%;
+      color: #383838;
+      /* font-family: Roboto; */
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+
+    .confirmPin {
+      height: 50px;
+      display: block;
+      margin: auto;
+      width: 100%;
+      font-size: 20px;
+      background-color: #081a51;
+      color: white;
+      border-radius: 25px;
+      cursor: pointer;
+      border: none;
+      margin-top: 5%;
+      margin-bottom: 5%;
+    }
+  }
+
+  /* Media Queries for Tablet */
+  @media (min-width: 450px) and (max-width: 1024px) {
+    .verifyPin {
+      width: 80%;
+      margin: auto;
+      padding: 10px;
+      margin-top: 5%;
+    }
+
+    .verifyPin h2 {
+      margin-bottom: 15%;
+    }
+
+    .confirmPin {
+      height: 50px;
+      display: block;
+      margin: auto;
+      width: 100%;
+      font-size: 20px;
+      background-color: #081a51;
+      color: white;
+      border-radius: 25px;
+      cursor: pointer;
+      border: none;
+      margin-top: 5%;
+      margin-bottom: 5%;
+    }
+  }
+
+  /* Media Queries for Laptop and Desktop */
+  @media (min-width: 1025px) {
   }
 `;

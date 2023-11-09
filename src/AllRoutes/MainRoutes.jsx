@@ -8,6 +8,7 @@ import { ResetPassword } from "../Pages/ResetPassword";
 import { ChakraProvider } from "@chakra-ui/react";
 import { PinTab } from "../Components/PinTab";
 import { Sensors } from "../Pages/Sensors";
+import { SideMenu } from "../Components/SideMenu";
 
 const theme = createTheme();
 
@@ -76,6 +77,15 @@ export const MainRoutes = () => {
         element={
           <ThemeProvider theme={theme}>
             <Sensors />
+          </ThemeProvider>
+        }
+      />
+
+      <Route
+        path="/sidemenu"
+        element={
+          <ThemeProvider theme={theme}>
+            <SideMenu />
           </ThemeProvider>
         }
       />

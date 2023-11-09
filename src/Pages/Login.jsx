@@ -1,7 +1,7 @@
 import { InputAdornment, TextField } from "@mui/material";
 import React from "react";
 import styled from "styled-components";
-import image from "../images/manakin_logo_blue.png";
+import image from "../images/mankin logo black.svg";
 import { Link } from "react-router-dom";
 import path from "../images/Path.svg";
 import fill from "../images/Fill 1.svg";

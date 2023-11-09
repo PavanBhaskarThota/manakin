@@ -17,18 +17,29 @@ export const Sensors = () => {
             background: "#FFF",
             boxShadow: "0px 5px 10px 0px #F1F2FA",
             width: "499px",
-            height: "897px",
           }}
         >
           <Stack
             direction={"row"}
             sx={{ justifyContent: "space-between", alignItems: "center" }}
           >
-            <h1>My Sensors</h1> <Button>Add+</Button>
+            <h1>My Sensors</h1>
+            <Button
+              sx={{
+                backgroundColor: "#E0ECF2",
+                marginRight: "10px",
+                borderRadius: "20px",
+              }}
+            >
+              Add+
+            </Button>
           </Stack>
+
           <Divider sx={{ mb: 1 }} />
           <Box
             sx={{
+              width: "95%",
+              margin: "auto",
               borderRadius: "12px",
               border: "1px solid rgba(0, 0, 0, 0.03)",
               background: "#E3E5F3",
@@ -36,6 +47,7 @@ export const Sensors = () => {
               display: "flex",
               alignItems: "center",
               paddingLeft: "18px",
+              justifyContent: "space-between",
             }}
           >
             Sensors
@@ -55,10 +67,16 @@ export const Sensors = () => {
           <Divider sx={{ mb: 1 }} />
           <Box
             sx={{
+              width: "95%",
+              margin: "auto",
               borderRadius: "12px",
               border: "1px solid rgba(0, 0, 0, 0.03)",
               background: "#E3E5F3",
               height: "55px",
+              display: "flex",
+              alignItems: "center",
+              paddingLeft: "18px",
+              justifyContent: "space-between",
             }}
           >
             Connect Device
@@ -123,13 +141,14 @@ export const Sensors = () => {
 };
 
 const DIV = styled.div`
-  width: 90%;
+  width: 100%;
   margin: auto;
 
   .confirmButton {
     display: block;
     margin-left: auto;
-    margin-top: 75%;
+    margin-top: 50%;
+    margin-bottom: 5%;
     margin-right: 5%;
     width: 173px;
     height: 45px;

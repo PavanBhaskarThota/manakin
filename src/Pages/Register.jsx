@@ -1,7 +1,7 @@
 import { Box, Button, Flex } from "@chakra-ui/react";
 import React, { useState } from "react";
 import styled from "styled-components";
-import image from "../images/manakin_logo_white.png";
+import image from "../images/Manakin Logo White.svg";
 import { TextField } from "@mui/material";
 
 const initialState = {
@@ -31,7 +31,7 @@ export const Register = () => {
 
         <form>
           {/* Name */}
-          <Flex gap="5%" direction={{ base: "column", lg: "row" }}>
+          <Flex gap="15%" direction={{ base: "column", lg: "row" }}>
             <Box width="100%">
               <TextField
                 variant="standard"
@@ -45,7 +45,7 @@ export const Register = () => {
                 InputProps={{
                   style: { paddingTop: "10px", fontSize: "20px" },
                 }}
-                style={{ marginBottom: "30px", width: "60%" }}
+                style={{ marginBottom: "30px", width: "80%" }}
               />
             </Box>
             <Box width="100%">
@@ -61,13 +61,13 @@ export const Register = () => {
                 InputProps={{
                   style: { paddingTop: "10px", fontSize: "20px" },
                 }}
-                style={{ marginBottom: "30px", width: "60%" }}
+                style={{ marginBottom: "30px", width: "80%" }}
               />
             </Box>
           </Flex>
 
           {/* Email and Password */}
-          <Flex gap="5%" direction={{ base: "column", lg: "row" }}>
+          <Flex gap="15%" direction={{ base: "column", lg: "row" }}>
             <Box width="100%">
               <TextField
                 variant="standard"
@@ -81,7 +81,7 @@ export const Register = () => {
                 InputProps={{
                   style: { paddingTop: "10px", fontSize: "20px" },
                 }}
-                style={{ marginBottom: "30px", width: "80%" }}
+                style={{ marginBottom: "30px", width: "100%" }}
               />
               <TextField
                 variant="standard"
@@ -95,7 +95,7 @@ export const Register = () => {
                 InputProps={{
                   style: { paddingTop: "10px", fontSize: "20px" },
                 }}
-                style={{ marginBottom: "30px", width: "80%" }}
+                style={{ marginBottom: "30px", width: "100%" }}
               />
               <TextField
                 variant="standard"
@@ -109,7 +109,7 @@ export const Register = () => {
                 InputProps={{
                   style: { paddingTop: "10px", fontSize: "20px" },
                 }}
-                style={{ marginBottom: "30px", width: "80%" }}
+                style={{ marginBottom: "30px", width: "100%" }}
               />
             </Box>
 
@@ -126,7 +126,7 @@ export const Register = () => {
                 InputProps={{
                   style: { paddingTop: "10px", fontSize: "20px" },
                 }}
-                style={{ marginBottom: "30px", width: "80%" }}
+                style={{ marginBottom: "30px", width: "100%" }}
               />
               <TextField
                 variant="standard"
@@ -140,7 +140,7 @@ export const Register = () => {
                 InputProps={{
                   style: { paddingTop: "10px", fontSize: "20px" },
                 }}
-                style={{ marginBottom: "30px", width: "80%" }}
+                style={{ marginBottom: "30px", width: "100%" }}
               />
             </Box>
           </Flex>
@@ -200,7 +200,7 @@ const DIV = styled.div`
   }
 
   form {
-    width: 100%;
+    width: 90%;
     margin: auto;
     gap: 5%;
     padding: 20px;
@@ -273,6 +273,21 @@ const DIV = styled.div`
     .loginForm {
       width: 70%;
       padding: 40px;
+    }
+
+    button {
+      height: 50px;
+      display: block;
+      margin: auto;
+      width: 100%;
+      font-size: 20px;
+      background-color: #081a51;
+      color: white;
+      border-radius: 25px;
+      cursor: pointer;
+      border: none;
+      margin-top: 5%;
+      margin-bottom: 5%;
     }
   }
 
