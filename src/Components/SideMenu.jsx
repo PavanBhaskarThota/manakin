@@ -82,17 +82,22 @@ export const SideMenu = () => {
       <CssBaseline />
       <AppBar position="fixed" open={open}>
         <Box>
-          <Toolbar>
+          <Toolbar sx={{ backgroundColor: "white" }}>
             <IconButton
               color="inherit"
               aria-label="open drawer"
               onClick={handleDrawerOpen}
               edge="start"
-              sx={{ mr: 2, ...(open && { display: "none" }) }}
+              sx={{ mr: 2, ...(open && { display: "none" }), color: "white" }}
             >
-              <MenuIcon />
+              <MenuIcon sx={{ color: "black" }} />
             </IconButton>
-            <Typography variant="h6" noWrap component="div">
+            <Typography
+              variant="h6"
+              noWrap
+              component="div"
+              sx={{ color: "black" }}
+            >
               Add Device
             </Typography>
           </Toolbar>
@@ -116,7 +121,19 @@ export const SideMenu = () => {
         open={open}
       >
         <DrawerHeader>
-          <h1>MANAKIN</h1>
+          <h1
+            style={{
+              textAlign: "center",
+              fontFamily: "Inter",
+              fontSize: "28px",
+              fontStyle: "normal",
+              fontWeight: "500",
+              lineHeight: "100%" /* 28px */,
+              letterSpacing: "5.04px",
+            }}
+          >
+            MANAKIN
+          </h1>
           <IconButton onClick={handleDrawerClose}>
             {theme.direction === "ltr" ? (
               <ChevronLeftIcon
@@ -135,14 +152,14 @@ export const SideMenu = () => {
               <ListItemButton>
                 <ListItemText
                   primary="MAIN MENU"
-                  sx={{ fontSize: "12px", color: "#51CBFF" }}
+                  sx={{ fontSize: "10px", color: "#51CBFF" }}
                 />
               </ListItemButton>
             </ListItem>
 
             <ListItem>
               <ListItemButton>
-                <img src={chartFill} alt="" />
+                <img src={chartFill} alt="" style={{ marginRight: "10px" }} />
                 <ListItemText primary="My Sensors" sx={{ fontSize: "18px" }} />
               </ListItemButton>
             </ListItem>

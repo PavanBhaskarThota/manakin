@@ -10,7 +10,7 @@ export const Sensors = () => {
   };
   return (
     <DIV>
-      <Stack direction={"row"} sx={{ width: "100%" }} spacing={2}>
+      <Stack direction={"row"} sx={{ width: "100%" }} spacing={2} rowGap={2}>
         <Box
           sx={{
             borderRadius: "8px",
@@ -48,9 +48,120 @@ export const Sensors = () => {
               alignItems: "center",
               paddingLeft: "18px",
               justifyContent: "space-between",
+              marginBottom: "10px",
             }}
           >
-            Sensors
+            Sensors{" "}
+            <p style={{ marginRight: "20px", fontSize: "20px" }}>lable</p>
+          </Box>
+
+          <Box
+            sx={{
+              width: "95%",
+              margin: "auto",
+              borderRadius: "12px",
+              border: "1px solid rgba(0, 0, 0, 0.03)",
+              background: "#FAFAFA",
+              height: "55px",
+              display: "flex",
+              alignItems: "center",
+              paddingLeft: "18px",
+              justifyContent: "space-between",
+              marginBottom: "10px",
+            }}
+          >
+            Sensor 1
+            <p style={{ marginRight: "20px", fontSize: "14px" }}>Room 401</p>
+          </Box>
+          <Box
+            sx={{
+              width: "95%",
+              margin: "auto",
+              borderRadius: "12px",
+              border: "1px solid rgba(0, 0, 0, 0.03)",
+              background: "#FAFAFA",
+              height: "55px",
+              display: "flex",
+              alignItems: "center",
+              paddingLeft: "18px",
+              justifyContent: "space-between",
+              marginBottom: "10px",
+            }}
+          >
+            Sensor 2
+            <p style={{ marginRight: "20px", fontSize: "14px" }}>Room 403</p>
+          </Box>
+          <Box
+            sx={{
+              width: "95%",
+              margin: "auto",
+              borderRadius: "12px",
+              border: "1px solid rgba(0, 0, 0, 0.03)",
+              background: "#FAFAFA",
+              height: "55px",
+              display: "flex",
+              alignItems: "center",
+              paddingLeft: "18px",
+              justifyContent: "space-between",
+              marginBottom: "10px",
+            }}
+          >
+            Sensor 3
+            <p style={{ marginRight: "20px", fontSize: "14px" }}>Room 404</p>
+          </Box>
+          <Box
+            sx={{
+              width: "95%",
+              margin: "auto",
+              borderRadius: "12px",
+              border: "1px solid rgba(0, 0, 0, 0.03)",
+              background: "#FAFAFA",
+              height: "55px",
+              display: "flex",
+              alignItems: "center",
+              paddingLeft: "18px",
+              justifyContent: "space-between",
+              marginBottom: "10px",
+            }}
+          >
+            Sensor 4
+            <p style={{ marginRight: "20px", fontSize: "14px" }}>Room 405</p>
+          </Box>
+          <Box
+            sx={{
+              width: "95%",
+              margin: "auto",
+              borderRadius: "12px",
+              border: "1px solid rgba(0, 0, 0, 0.03)",
+              background: "#FAFAFA",
+              height: "55px",
+              display: "flex",
+              alignItems: "center",
+              paddingLeft: "18px",
+              justifyContent: "space-between",
+              marginBottom: "10px",
+            }}
+          >
+            Sensor 5
+            <p style={{ marginRight: "20px", fontSize: "14px" }}>Room 406</p>
+          </Box>
+          <Box
+            sx={{
+              width: "95%",
+              margin: "auto",
+              borderRadius: "12px",
+              border: "1px solid rgba(0, 0, 0, 0.03)",
+              background: "#FAFAFA",
+              height: "55px",
+              display: "flex",
+              alignItems: "center",
+              paddingLeft: "18px",
+              justifyContent: "space-between",
+              marginBottom: "10px",
+            }}
+          >
+            Sensor 6
+            <p style={{ marginRight: "20px", fontSize: "14px" }}>Room 407</p>
           </Box>
         </Box>
         <Box
