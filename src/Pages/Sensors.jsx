@@ -52,7 +52,7 @@ export const Sensors = () => {
               height: "65px",
               display: "flex",
               alignItems: "center",
-
+              cursor: "pointer",
               paddingLeft: "18px",
               justifyContent: "space-between",
               marginBottom: "10px",
@@ -81,6 +81,7 @@ export const Sensors = () => {
                 height: "55px",
                 display: "flex",
                 alignItems: "center",
+                cursor: "pointer",
                 paddingLeft: "18px",
                 justifyContent: "space-between",
                 marginBottom: "10px",
