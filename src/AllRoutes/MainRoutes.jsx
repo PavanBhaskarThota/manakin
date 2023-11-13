@@ -12,6 +12,7 @@ import { SideMenu } from "../Components/SideMenu";
 import { DashBoard } from "../Pages/DashBoard";
 import { DashBoardPin } from "../Components/DashBoardPin";
 import { ModelPop } from "../Components/ModelPop";
+import { DashBoardError } from "../Pages/DashBoardError";
 
 const theme = createTheme();
 
@@ -96,6 +97,15 @@ export const MainRoutes = () => {
           <ChakraProvider>
             <DashBoardPin />
           </ChakraProvider>
+        }
+      />
+
+      <Route
+        path="dashboarderror"
+        element={
+          <ThemeProvider theme={theme}>
+            <DashBoardError />
+          </ThemeProvider>
         }
       />
 
