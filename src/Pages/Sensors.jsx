@@ -560,8 +560,8 @@ export const Sensors = () => {
           </Box>
 
           <Box display="flex" justifyContent="center" marginTop='2%' marginBottom='3%' gap={0.5} width="70%">
-                <button style={{border:'none', background:'none'}}><img src={prev} alt="" /></button>
-                <button style={{border:'none', background:'none'}}><img src={next} alt="" /></button>
+                <button style={{border:'none', background:'none', cursor:'pointer'}}><img src={prev} alt="" /></button>
+                <button style={{border:'none', background:'none', cursor:'pointer'}}><img src={next} alt="" /></button>
               </Box>
         </Box>
       </Stack>
