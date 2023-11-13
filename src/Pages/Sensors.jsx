@@ -2,18 +2,27 @@ import { Box, Button, Divider, IconButton, Modal, Stack } from "@mui/material";
 import React, { useState } from "react";
 import CloseIcon from "@mui/icons-material/Close";
 import styled from "styled-components";
+import pipe from "../images/Pipe.svg";
+import next from "../images/Vector_next.svg";
+import prev from "../images/Vector_back.svg";
+
+const mysensors = [
+  ["sensor 1", "Room 401"],
+  ["sensor 2", "Room 402"],
+  ["sensor 3", "Room 403"],
+  ["sensor 4", "Room 405"],
+  ["sensor 5", "Room 406"],
+  ["sensor 6", "Room 407"],
+  ["sensor 7", "Room 408"],
+];
 
 export const Sensors = () => {
-  const [open, setOpen] = useState(false);
-
   const [sensor, setSensor] = useState(null);
 
   const handleSensor = (index) => {
     setSensor(index === sensor ? null : index);
   };
-  const handleTrigger = () => {
-    setOpen(!open);
-  };
+
   return (
     <DIV>
       <Stack direction={"row"} sx={{ width: "100%" }} spacing={2} rowGap={2}>
@@ -27,7 +36,7 @@ export const Sensors = () => {
         >
           <Stack
             direction={"row"}
-            sx={{ justifyContent: "space-between", alignItems: "center" }}
+            sx={{ justifyContent: "space-between", alignItems: "center", paddingLeft:'10px'}}
           >
             <h1>My Sensors</h1>
             <Button
@@ -61,17 +70,10 @@ export const Sensors = () => {
             Sensors{" "}
             <p style={{ marginRight: "20px", fontSize: "20px" }}>lable</p>
           </Box>
-          {[
-            ["sensor 1", "Room 401"],
-            ["sensor 2", "Room 402"],
-            ["sensor 3", "Room 403"],
-            ["sensor 4", "Room 405"],
-            ["sensor 5", "Room 406"],
-            ["sensor 6", "Room 407"],
-            ["sensor 7", "Room 408"],
-          ].map((item, index) => (
+          {mysensors.map((item, index) => (
             <Box
               onClick={() => handleSensor(index)}
+              key={index}
               sx={{
                 width: "95%",
                 margin: "auto",
@@ -101,81 +103,468 @@ export const Sensors = () => {
             flex: 1,
           }}
         >
-          <Stack direction={"row"}>
-            <h1>Add New Device - Table Top</h1>
+          <Stack
+            direction={"row"}
+            justifyContent="space-between"
+            alignItems="center"
+            marginRight="10px"
+          >
+            <Box sx={{ display: "flex" }}>
+              <Box
+                sx={{
+                  backgroundColor: "#51CBFF",
+                  marginTop: "auto",
+                  marginBottom: "auto",
+                  display: "flex",
+                  justifyContent: "center",
+                  height: "34px",
+                  width: "34px",
+                  marginLeft: "10px",
+                  marginRight: "10px",
+                  borderRadius: "50%",
+                }}
+              >
+                <img
+                  src={pipe}
+                  alt=""
+                  style={{
+                    display: "block",
+                    margin: "auto",
+                  }}
+                />
+              </Box>
+              <h1>Sensor 4</h1>
+            </Box>
+
+            <p>Room 406</p>
           </Stack>
           <Divider sx={{ mb: 1 }} />
+
           <Box
             sx={{
+              display: "flex",
+              gap: "3%",
               width: "95%",
               margin: "auto",
-              borderRadius: "12px",
-              border: "1px solid rgba(0, 0, 0, 0.03)",
-              background: "#E3E5F3",
-              height: "55px",
-              display: "flex",
-              alignItems: "center",
-              paddingLeft: "18px",
-              justifyContent: "space-between",
+              p: "20px",
             }}
           >
-            Connect Device
+            <Box
+              sx={{
+                width: "95%",
+                margin: "auto",
+                borderRadius: "12px",
+                border: "1px solid rgba(0, 0, 0, 0.03)",
+                background: "#F4FCFF",
+
+                padding: "3%",
+              }}
+            >
+              Pathogen History
+              <Box
+                sx={{
+                  width: "100%",
+                  margin: "auto",
+                  borderRadius: "12px",
+                  border: "1px solid rgba(0, 0, 0, 0.03)",
+                  background: "#E3E5F3",
+                  height: "55px",
+                  display: "flex",
+                  paddingLeft: "18px",
+                  justifyContent: "space-around",
+                  alignItems: "center",
+                  marginTop: "10px",
+                }}
+              >
+                <p>Timestamp</p>
+                <p>Pathogen Results</p>
+              </Box>
+              {/* tables */}
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                  width: "100%",
+                  margin: "auto",
+                  padding: "20px",
+                  // border: "1px solid",
+                  marginTop: "20px",
+                  background: "#FAFAFA",
+                }}
+              >
+                <Box width="60%" textAlign="center">
+                  <p>09/21/23 10:30 AM</p>
+                </Box>
+
+                <Box width="100%">
+                  <table
+                    style={{
+                      borderCollapse: "collapse",
+                      width: "100%",
+                      height: "125px",
+                      textAlign: "left",
+                      letterSpacing: "2.52px",
+                    }}
+                  >
+                    <tbody>
+                      <tr style={{ border: "1px solid #000" }}>
+                        <td
+                          style={{
+                            borderRight: "1px solid #000",
+                            padding: "8px",
+                          }}
+                        >
+                          Infuenza
+                        </td>
+                        <td
+                          style={{
+                            borderRight: "1px solid #000",
+                            padding: "8px",
+                          }}
+                        >
+                          Negative
+                        </td>
+                      </tr>
+                      <tr style={{ border: "1px solid #000" }}>
+                        <td
+                          style={{
+                            borderRight: "1px solid #000",
+                            padding: "8px",
+                          }}
+                        >
+                          Salmonella
+                        </td>
+                        <td
+                          style={{
+                            borderRight: "1px solid #000",
+                            padding: "8px",
+                          }}
+                        >
+                          Negative
+                        </td>
+                      </tr>
+                      <tr
+                        style={{ border: "1px solid #000", fontWeight: "bold" }}
+                      >
+                        <td
+                          style={{
+                            borderRight: "1px solid #000",
+                            padding: "8px",
+                          }}
+                        >
+                          E.Coil
+                        </td>
+                        <td
+                          style={{
+                            borderRight: "1px solid #000",
+                            padding: "8px",
+                          }}
+                        >
+                          Positive
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </Box>
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                  width: "100%",
+                  margin: "auto",
+                  padding: "20px",
+                  // border: "1px solid",
+                  marginTop: "20px",
+                  background: "#FAFAFA",
+                }}
+              >
+                <Box width="60%" textAlign="center">
+                  <p>09/21/23 10:30 AM</p>
+                </Box>
+
+                <Box width="100%">
+                  <table
+                    style={{
+                      borderCollapse: "collapse",
+                      width: "100%",
+                      height: "125px",
+                      textAlign: "left",
+                      letterSpacing: "2.52px",
+                    }}
+                  >
+                    <tbody>
+                      <tr style={{ border: "1px solid #000" }}>
+                        <td
+                          style={{
+                            borderRight: "1px solid #000",
+                            padding: "8px",
+                          }}
+                        >
+                          Infuenza
+                        </td>
+                        <td
+                          style={{
+                            borderRight: "1px solid #000",
+                            padding: "8px",
+                          }}
+                        >
+                          Negative
+                        </td>
+                      </tr>
+                      <tr
+                        style={{ border: "1px solid #000", fontWeight: "bold" }}
+                      >
+                        <td
+                          style={{
+                            borderRight: "1px solid #000",
+                            padding: "8px",
+                          }}
+                        >
+                          Salmonella
+                        </td>
+                        <td
+                          style={{
+                            borderRight: "1px solid #000",
+                            padding: "8px",
+                          }}
+                        >
+                          Negative
+                        </td>
+                      </tr>
+                      <tr style={{ border: "1px solid #000" }}>
+                        <td
+                          style={{
+                            borderRight: "1px solid #000",
+                            padding: "8px",
+                          }}
+                        >
+                          E.Coil
+                        </td>
+                        <td
+                          style={{
+                            borderRight: "1px solid #000",
+                            padding: "8px",
+                          }}
+                        >
+                          Positive
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </Box>
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                  width: "100%",
+                  margin: "auto",
+                  padding: "20px",
+                  // border: "1px solid",
+                  marginTop: "20px",
+                  background: "#FAFAFA",
+                }}
+              >
+                <Box width="60%" textAlign="center">
+                  <p>09/21/23 10:30 AM</p>
+                </Box>
+
+                <Box width="100%">
+                  <table
+                    style={{
+                      borderCollapse: "collapse",
+                      width: "100%",
+                      height: "125px",
+                      textAlign: "left",
+                      letterSpacing: "2.52px",
+                    }}
+                  >
+                    <tbody>
+                      <tr
+                        style={{ border: "1px solid #000", fontWeight: "bold" }}
+                      >
+                        <td
+                          style={{
+                            borderRight: "1px solid #000",
+                            padding: "8px",
+                          }}
+                        >
+                          Infuenza
+                        </td>
+                        <td
+                          style={{
+                            borderRight: "1px solid #000",
+                            padding: "8px",
+                          }}
+                        >
+                          Negative
+                        </td>
+                      </tr>
+                      <tr
+                        style={{ border: "1px solid #000", fontWeight: "bold" }}
+                      >
+                        <td
+                          style={{
+                            borderRight: "1px solid #000",
+                            padding: "8px",
+                          }}
+                        >
+                          Salmonella
+                        </td>
+                        <td
+                          style={{
+                            borderRight: "1px solid #000",
+                            padding: "8px",
+                          }}
+                        >
+                          Negative
+                        </td>
+                      </tr>
+                      <tr style={{ border: "1px solid #000" }}>
+                        <td
+                          style={{
+                            borderRight: "1px solid #000",
+                            padding: "8px",
+                          }}
+                        >
+                          E.Coil
+                        </td>
+                        <td
+                          style={{
+                            borderRight: "1px solid #000",
+                            padding: "8px",
+                          }}
+                        >
+                          Positive
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </Box>
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                  width: "100%",
+                  margin: "auto",
+                  padding: "20px",
+                  // border: "1px solid",
+                  marginTop: "20px",
+                  background: "#FAFAFA",
+                }}
+              >
+                <Box width="60%" textAlign="center">
+                  <p>09/21/23 10:30 AM</p>
+                </Box>
+
+                <Box width="100%">
+                  <table
+                    style={{
+                      borderCollapse: "collapse",
+                      width: "100%",
+                      height: "125px",
+                      textAlign: "left",
+                      letterSpacing: "2.52px",
+                    }}
+                  >
+                    <tbody>
+                      <tr style={{ border: "1px solid #000" }}>
+                        <td
+                          style={{
+                            borderRight: "1px solid #000",
+                            padding: "8px",
+                          }}
+                        >
+                          Infuenza
+                        </td>
+                        <td
+                          style={{
+                            borderRight: "1px solid #000",
+                            padding: "8px",
+                          }}
+                        >
+                          Negative
+                        </td>
+                      </tr>
+                      <tr
+                        style={{ border: "1px solid #000", fontWeight: "bold" }}
+                      >
+                        <td
+                          style={{
+                            borderRight: "1px solid #000",
+                            padding: "8px",
+                          }}
+                        >
+                          Salmonella
+                        </td>
+                        <td
+                          style={{
+                            borderRight: "1px solid #000",
+                            padding: "8px",
+                          }}
+                        >
+                          Negative
+                        </td>
+                      </tr>
+                      <tr
+                        style={{ border: "1px solid #000", fontWeight: "bold" }}
+                      >
+                        <td
+                          style={{
+                            borderRight: "1px solid #000",
+                            padding: "8px",
+                          }}
+                        >
+                          E.Coil
+                        </td>
+                        <td
+                          style={{
+                            borderRight: "1px solid #0b0505",
+                            padding: "8px",
+                          }}
+                        >
+                          Positive
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </Box>
+              </Box>
+              
+            </Box>
+
+            <Box
+              sx={{
+                width: "30%",
+                borderRadius: "12px",
+                border: "1px solid rgba(0, 0, 0, 0.03)",
+                background: "#F4FCFF",
+                height: "150px",
+                justifyContent: "space-between",
+                padding: "10px",
+                textAlign: "center",
+              }}
+            >
+              <h2 style={{ fontSize: "16px", margin: "0" }}>
+                Cartridge Lifecycle
+              </h2>
+              <h1 style={{ fontSize: "48px", margin: "0" }}>125</h1>
+              <h5 style={{ fontSize: "14px", margin: "0" }}>tests left</h5>
+            </Box>
           </Box>
-          <form
-            onSubmit={(e) => {
-              e.preventDefault();
-              handleTrigger();
-            }}
-          >
-            <button type="submit" className="confirmButton">
-              Confirm
-            </button>
-          </form>
+
+          <Box display="flex" justifyContent="center" marginTop='2%' marginBottom='3%' gap={0.5} width="70%">
+                <button style={{border:'none', background:'none'}}><img src={prev} alt="" /></button>
+                <button style={{border:'none', background:'none'}}><img src={next} alt="" /></button>
+              </Box>
         </Box>
       </Stack>
-      <Modal
-        open={open}
-        onClose={handleTrigger}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          ml: "35%",
-        }}
-        hideBackdrop={true}
-      >
-        <Box
-          sx={{
-            borderRadius: "17px",
-            border: "1px solid #979797",
-            background: "#FFF",
-            boxShadow: "0px 4px 4px 0px rgba(0, 0, 0, 0.25)",
-            width: "550px",
-            height: "347px",
-            position: "relative",
-            padding: "10px",
-            textAlign: "center",
-          }}
-        >
-          <h1 className="popup">
-            Congratulations you have successfully added your device
-          </h1>
-          <IconButton
-            aria-label="close"
-            size="small"
-            sx={{
-              position: "absolute",
-              right: "8px",
-              top: "8px",
-            }}
-            onClick={handleTrigger}
-          >
-            <CloseIcon fontSize="inherit" />
-          </IconButton>
-        </Box>
-      </Modal>
     </DIV>
   );
 };
@@ -183,35 +572,4 @@ export const Sensors = () => {
 const DIV = styled.div`
   width: 100%;
   margin: auto;
-
-  .confirmButton {
-    display: block;
-    margin-left: auto;
-    margin-top: 50%;
-    margin-bottom: 5%;
-    margin-right: 5%;
-    width: 173px;
-    height: 45px;
-    border-radius: 29.5px;
-    background: #072f78;
-    color: #fff;
-    /* font-family: Roboto; */
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    letter-spacing: 0.075px;
-    border: none;
-  }
-
-  .popup {
-    color: #383838;
-    text-align: center;
-    font-family: Roboto;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    color: red;
-  }
 `;

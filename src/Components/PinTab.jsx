@@ -102,7 +102,7 @@ export const PinTab = () => {
           if you didn't receive code in{" "}
           <span style={{ color: "#3686F0" }}>{timer}</span> seconds
         </p>
-        <Link to={`/sidemenu`}>
+        <Link to={`/sidemenu/sensors`}>
           <button type="submit" className="confirmPin">
             Confirm
           </button>

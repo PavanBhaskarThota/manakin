@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
+import { Outlet, Route, Routes } from "react-router-dom";
 import { Register } from "../Pages/Register";
 import { ThemeProvider, createTheme } from "@mui/material";
 import { Login } from "../Pages/Login";
@@ -9,6 +9,9 @@ import { ChakraProvider } from "@chakra-ui/react";
 import { PinTab } from "../Components/PinTab";
 import { Sensors } from "../Pages/Sensors";
 import { SideMenu } from "../Components/SideMenu";
+import { DashBoard } from "../Pages/DashBoard";
+import { DashBoardPin } from "../Components/DashBoardPin";
+import { ModelPop } from "../Components/ModelPop";
 
 const theme = createTheme();
 
@@ -72,21 +75,36 @@ export const MainRoutes = () => {
           </ChakraProvider>
         }
       />
+
       <Route
-        path="/sensors"
+        path="/sidemenu/*"
         element={
           <ThemeProvider theme={theme}>
-            <Sensors />
+            <SideMenu>
+              <Outlet />
+            </SideMenu>
           </ThemeProvider>
+        }
+      >
+        <Route path="sensors" element={<Sensors />} />
+        <Route path="dashboard" element={<DashBoard />} />
+      </Route>
+
+      <Route
+        path="/dashpin"
+        element={
+          <ChakraProvider>
+            <DashBoardPin />
+          </ChakraProvider>
         }
       />
 
       <Route
-        path="/sidemenu"
+        path="/model"
         element={
-          <ThemeProvider theme={theme}>
-            <SideMenu />
-          </ThemeProvider>
+          <ChakraProvider>
+            <ModelPop />
+          </ChakraProvider>
         }
       />
     </Routes>

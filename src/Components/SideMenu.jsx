@@ -15,8 +15,8 @@ import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
-import { Sensors } from "../Pages/Sensors";
 import chartFill from "../images/Chart_fill.svg";
+import { Link, Outlet } from "react-router-dom";
 
 const drawerWidth = 240;
 
@@ -65,7 +65,7 @@ const DrawerHeader = styled("div")(({ theme }) => ({
   justifyContent: "flex-end",
 }));
 
-export const SideMenu = () => {
+export const SideMenu = ({children}) => {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
 
@@ -157,20 +157,40 @@ export const SideMenu = () => {
               </ListItemButton>
             </ListItem>
 
-            <ListItem>
-              <ListItemButton>
-                <img src={chartFill} alt="" style={{ marginRight: "10px" }} />
-                <ListItemText primary="My Sensors" sx={{ fontSize: "18px" }} />
-              </ListItemButton>
-            </ListItem>
+            <Link
+              to={"/sidemenu/dashboard"}
+              style={{ textDecoration: "none", color: "white" }}
+            >
+              <ListItem>
+                <ListItemButton>
+                  <img src={chartFill} alt="" style={{ marginRight: "10px" }} />
+                  <ListItemText primary="DashBoard" sx={{ fontSize: "18px" }} />
+                </ListItemButton>
+              </ListItem>
+            </Link>
+
+            <Link
+              to={"/sidemenu/sensors"}
+              style={{ textDecoration: "none", color: "white" }}
+            >
+              <ListItem>
+                <ListItemButton>
+                  <img src={chartFill} alt="" style={{ marginRight: "10px" }} />
+                  <ListItemText
+                    primary="My Sensors"
+                    sx={{ fontSize: "18px" }}
+                  />
+                </ListItemButton>
+              </ListItem>
+            </Link>
           </List>
           <Divider />
         </Box>
       </Drawer>
       <Main open={open}>
         <DrawerHeader />
-
-        <Sensors />
+        {children}
+        {/* <Outlet /> */}
       </Main>
     </Box>
   );
