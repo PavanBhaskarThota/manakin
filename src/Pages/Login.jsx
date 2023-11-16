@@ -116,7 +116,7 @@ const DIV = styled.div`
   h1 {
     color: #fff;
     text-align: center;
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-size: 48px;
     font-style: normal;
     font-weight: 500;
@@ -174,7 +174,7 @@ const DIV = styled.div`
     cursor: pointer;
     border: none;
     color: #0a194e;
-    /* font-family: "Roboto"; */
+    font-family: sans-serif;
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
