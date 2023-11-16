@@ -45,7 +45,7 @@ export const Register = () => {
                 InputProps={{
                   style: { paddingTop: "10px", fontSize: "20px" },
                 }}
-                style={{ marginBottom: "30px", width: "80%" }}
+                style={{ marginBottom: "15px", width: "80%" }}
               />
             </Box>
             <Box width="100%">
@@ -61,7 +61,7 @@ export const Register = () => {
                 InputProps={{
                   style: { paddingTop: "10px", fontSize: "20px" },
                 }}
-                style={{ marginBottom: "30px", width: "80%" }}
+                style={{ marginBottom: "15px", width: "80%" }}
               />
             </Box>
           </Flex>
@@ -81,7 +81,7 @@ export const Register = () => {
                 InputProps={{
                   style: { paddingTop: "10px", fontSize: "20px" },
                 }}
-                style={{ marginBottom: "30px", width: "100%" }}
+                style={{ marginBottom: "15px", width: "100%" }}
               />
               <TextField
                 variant="standard"
@@ -95,7 +95,7 @@ export const Register = () => {
                 InputProps={{
                   style: { paddingTop: "10px", fontSize: "20px" },
                 }}
-                style={{ marginBottom: "30px", width: "100%" }}
+                style={{ marginBottom: "15px", width: "100%" }}
               />
               <TextField
                 variant="standard"
@@ -109,7 +109,7 @@ export const Register = () => {
                 InputProps={{
                   style: { paddingTop: "10px", fontSize: "20px" },
                 }}
-                style={{ marginBottom: "30px", width: "100%" }}
+                style={{ marginBottom: "15px", width: "100%" }}
               />
             </Box>
 
@@ -126,7 +126,7 @@ export const Register = () => {
                 InputProps={{
                   style: { paddingTop: "10px", fontSize: "20px" },
                 }}
-                style={{ marginBottom: "30px", width: "100%" }}
+                style={{ marginBottom: "15px", width: "100%" }}
               />
               <TextField
                 variant="standard"
@@ -140,7 +140,7 @@ export const Register = () => {
                 InputProps={{
                   style: { paddingTop: "10px", fontSize: "20px" },
                 }}
-                style={{ marginBottom: "30px", width: "100%" }}
+                style={{ marginBottom: "15px", width: "100%" }}
               />
             </Box>
           </Flex>
@@ -169,7 +169,7 @@ const DIV = styled.div`
 
   h1 {
     font-family: Arial, Helvetica, sans-serif;
-    font-family: Inter,sans-serif;
+    font-family: Inter, sans-serif;
     font-size: 36px;
     font-style: normal;
     font-weight: 500;
@@ -185,12 +185,12 @@ const DIV = styled.div`
   h2 {
     color: #383838;
     text-align: center;
-    /* font-family: Roboto; */
+    font-family: Inter, sans-serif;
     font-size: 36px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    margin-bottom: 10%;
+    margin-bottom: 7%;
   }
 
   .registerForm {
@@ -203,7 +203,6 @@ const DIV = styled.div`
     width: 90%;
     margin: auto;
     gap: 5%;
-    padding: 20px;
   }
 
   .userDetails .MuiInputLabel-asterisk {
