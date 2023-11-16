@@ -39,7 +39,7 @@ export const ForgotPassword = () => {
                   </InputAdornment>
                 ),
               }}
-              style={{ marginBottom: "30px", width: "100%" }}
+              style={{ marginBottom: "30px", width: "508.653px" }}
             />
             <Link to={"/resetpassword"}>
               <button>Reset Password</button>
@@ -89,7 +89,7 @@ const DIV = styled.div`
   }
 
   .forgotForm {
-    width: 45%;
+    width: 80%;
     margin: auto;
     padding: 50px;
   }
@@ -106,9 +106,13 @@ const DIV = styled.div`
   }
 
   form {
-    width: 80%;
+    width: 100%;
     margin: auto;
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
   }
 
   p {
@@ -145,8 +149,8 @@ const DIV = styled.div`
     letter-spacing: 0.075px;
     display: block;
     margin: auto;
-    margin-top: 7%;
-    margin-bottom: 5%;
+    margin-top: 5%;
+    margin-bottom: 10%;
   }
 
   /* Media Queries for Mobile */

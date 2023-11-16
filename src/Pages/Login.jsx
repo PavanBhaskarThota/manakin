@@ -28,14 +28,13 @@ export const Login = () => {
               InputProps={{
                 style: {
                   color: "#D8D8D8",
-
                   fontSize: "16px",
                   fontStyle: "normal",
-                  fontHeight: "300",
+                  fontHeight: "normal",
                   lineHeight: "normal",
-                  fontWeight: "100",
-                  letterSpacing: "1.5px",
+                  fontWeight: "300",
                   paddingBottom: "10px",
+                  width: "341px",
                 },
                 startAdornment: (
                   <InputAdornment position="start">
@@ -50,19 +49,16 @@ export const Login = () => {
               variant="standard"
               type="password"
               placeholder=" Password"
-              InputLabelProps={{
-                style: { color: "#a0a0a0", fontSize: "18px" },
-              }}
               InputProps={{
                 style: {
                   color: "#D8D8D8",
                   fontSize: "16px",
                   fontStyle: "normal",
-                  fontHeight: "300",
+                  fontHeight: "normal",
                   lineHeight: "normal",
-                  fontWeight: "100",
-                  letterSpacing: "1.5px",
+                  fontWeight: "300",
                   paddingBottom: "10px",
+                  width: "341px",
                 },
                 startAdornment: (
                   <InputAdornment position="start">
@@ -101,14 +97,13 @@ const DIV = styled.div`
   max-height: 100%;
 
   .loginForm {
-    width: 40%;
+    width: 50%;
     margin: auto;
-    /* padding: 100px; */
-    padding-top: 10%;
+    padding-top: 5%;
   }
 
   .manakinImg {
-    width: 40%;
+    width: 50%;
     margin: auto;
   }
 
@@ -119,18 +114,23 @@ const DIV = styled.div`
   }
 
   h1 {
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    letter-spacing: 10px;
+    color: #fff;
     text-align: center;
-    margin-bottom: 50px;
+    font-family: Inter;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%; /* 48px */
+    letter-spacing: 8.64px;
   }
 
   form {
-    width: 70%;
+    width: 347.224px;
     margin: auto;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     row-gap: 5%;
   }
 
@@ -141,12 +141,12 @@ const DIV = styled.div`
     border-bottom-color: white;
   }
 
-
   .MuiTextField-root .MuiInputBase-root:hover:before {
     border-bottom: 2px solid teal;
   }
 
   p {
+    width: 100%;
     text-align: right;
     margin-bottom: 20px;
     color: #a0a0a0;
@@ -154,6 +154,7 @@ const DIV = styled.div`
   }
 
   a {
+    text-align: right;
     text-decoration: none;
     color: #a0a0a0;
   }
@@ -166,18 +167,25 @@ const DIV = styled.div`
     height: 45px;
     display: block;
     margin: auto;
-    width: 100%;
-    font-size: 20px;
+    width: 347.224px;
+    height: 52.491px;
     background-color: white;
-    color: black;
     border-radius: 25px;
     cursor: pointer;
     border: none;
+    color: #0a194e;
+    /* font-family: "Roboto"; */
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.075px;
   }
 
   /* Media Queries for Mobile */
   @media (max-width: 450px) {
     min-height: 100%;
+    height: 100vh;
 
     .loginForm {
       width: 90%;
@@ -195,6 +203,8 @@ const DIV = styled.div`
   /* Media Queries for Tablet */
   @media (min-width: 450px) and (max-width: 1024px) {
     min-height: 100%;
+    height: 100vh;
+
     .loginForm {
       width: 70%;
       padding: 40px;
@@ -207,9 +217,6 @@ const DIV = styled.div`
 
   /* Media Queries for Laptop and Desktop */
   @media (min-width: 1025px) {
-    .loginForm {
-      width: 35%;
-      padding: 100px;
-    }
+
   }
 `;

@@ -194,7 +194,7 @@ const DIV = styled.div`
   }
 
   .registerForm {
-    width: 60%;
+    width: 70%;
     margin: auto;
     /* padding: 50px; */
   }

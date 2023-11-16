@@ -31,7 +31,7 @@ export const ResetPassword = () => {
               InputProps={{
                 style: { paddingTop: "10px", fontSize: "20px" },
               }}
-              style={{ marginBottom: "30px", width: "100%" }}
+              style={{ marginBottom: "30px", width: "508.653px" }}
             />
             <TextField
               variant="standard"
@@ -45,7 +45,7 @@ export const ResetPassword = () => {
               InputProps={{
                 style: { paddingTop: "10px", fontSize: "20px" },
               }}
-              style={{ marginBottom: "30px", width: "100%" }}
+              style={{ marginBottom: "30px", width: "508.653px" }}
             />
 
             <button type="submit">Confirm</button>
@@ -93,9 +93,8 @@ const DIV = styled.div`
   }
 
   .resetForm {
-    width: 45%;
+    width: 80%;
     margin: auto;
-    padding: 50px;
   }
 
   .resetForm h2 {
@@ -106,13 +105,16 @@ const DIV = styled.div`
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    margin-bottom: 25%;
+    margin-bottom: 15%;
   }
 
   form {
-    width: 80%;
+    width: 100%;
     margin: auto;
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   form div:nth-child(1) {
@@ -161,6 +163,8 @@ const DIV = styled.div`
     font-weight: 500;
     line-height: normal;
     letter-spacing: 0.075px;
+    margin-top: 5%;
+    margin-bottom: 5%;
   }
 
   /* Media Queries for Mobile */

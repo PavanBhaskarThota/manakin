@@ -46,21 +46,21 @@ export const PinTab = () => {
         <HStack margin="auto">
           <PinInput type="alphanumeric" placeholder="" autoFocus={true}>
             <PinInputField
-              border="2px solid"
+              border="1px solid #000"
               borderRadius="none"
               width="82.237px"
               height="109.18px"
               fontSize="30px"
             />
             <PinInputField
-              border="2px solid"
+              border="1px solid #000"
               borderRadius="none"
               width="82.237px"
               height="109.18px"
               fontSize="30px"
             />
             <PinInputField
-              border="2px solid"
+              border="1px solid #000"
               borderRadius="none"
               width="82.237px"
               height="109.18px"
@@ -69,21 +69,21 @@ export const PinTab = () => {
             <h2>-</h2>
 
             <PinInputField
-              border="2px solid"
+              border="1px solid #000"
               borderRadius="none"
               width="82.237px"
               height="109.18px"
               fontSize="30px"
             />
             <PinInputField
-              border="2px solid"
+              border="1px solid #000"
               borderRadius="none"
               width="82.237px"
               height="109.18px"
               fontSize="30px"
             />
             <PinInputField
-              border="2px solid"
+              border="1px solid #000"
               borderRadius="none"
               width="82.237px"
               height="109.18px"
@@ -93,7 +93,7 @@ export const PinTab = () => {
         </HStack>
         <p>
           <button
-            style={{ color: timer != 0 ?"black":"#3686F0", opacity:0.8}}
+            style={{ color: timer != 0 ? "#000" : "#3686F0", opacity: 0.8 }}
             disabled={timer != 0 ? true : false}
             onClick={startTimer}
           >
@@ -168,7 +168,7 @@ const DIV = styled.div`
     /* font-family: Roboto; */
     font-size: 20px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 300;
     line-height: normal;
   }
 
