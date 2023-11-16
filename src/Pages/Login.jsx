@@ -97,18 +97,18 @@ const DIV = styled.div`
   max-height: 100%;
 
   .loginForm {
-    width: 50%;
+    width: 40%;
     margin: auto;
     padding-top: 5%;
   }
 
   .manakinImg {
-    width: 50%;
+    width: 60%;
     margin: auto;
   }
 
   .manakinImg img {
-    width: 70%;
+    width: 60%;
     display: block;
     margin: auto;
   }
@@ -210,9 +210,16 @@ const DIV = styled.div`
       padding: 40px;
     }
 
-    /* .manakinImg {
-      width: 50%;
-    } */
+    h1 {
+    color: #fff;
+    text-align: center;
+    font-family: Inter;
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%; /* 48px */
+    letter-spacing: 8.64px;
+  }
   }
 
   /* Media Queries for Laptop and Desktop */
