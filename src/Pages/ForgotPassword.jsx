@@ -75,7 +75,7 @@ const DIV = styled.div`
 
   h1 {
     font-family: Arial, Helvetica, sans-serif;
-    font-family: Inter;
+    font-family: Inter,sans-serif;
     font-size: 36px;
     font-style: normal;
     font-weight: 500;
